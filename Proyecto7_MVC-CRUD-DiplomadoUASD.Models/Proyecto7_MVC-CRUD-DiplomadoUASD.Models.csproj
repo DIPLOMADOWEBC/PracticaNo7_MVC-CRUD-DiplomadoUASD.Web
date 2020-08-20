@@ -52,6 +52,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Departamento.cs">
+      <DependentUpon>EmpleadosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Empleado.cs">
+      <DependentUpon>EmpleadosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmpleadosModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpleadosModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmpleadosModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpleadosModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmpleadosModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmpleadosModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\EntityModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -79,12 +100,29 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EntityModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="Models\EmpleadosModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EmpleadosModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\EmpleadosModel.edmx.diagram">
+      <DependentUpon>EmpleadosModel.edmx</DependentUpon>
+    </None>
     <None Include="Models\EntityModel.edmx.diagram">
       <DependentUpon>EntityModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Models\EmpleadosModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmpleadosModel.edmx</DependentUpon>
+      <LastGenOutput>EmpleadosModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\EmpleadosModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EmpleadosModel.edmx</DependentUpon>
+      <LastGenOutput>EmpleadosModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Models\EntityModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>EntityModel.edmx</DependentUpon>
